@@ -29,11 +29,21 @@ public class PropietarioRepositoryImpl implements IPropietarioRepository {
 		}
 		return null;
 	}
+	
+	public Propietario seleccionarEliminar(String cedula) {
+		// TODO Auto-generated method stub
+		for (Propietario prop : base) {
+			if (prop.getCedula().equals(cedula))
+				;
+			return prop;
+		}
+		return null;
+	}
 
 	@Override
 	public void eliminar(String cedula) {
 		// TODO Auto-generated method stub
-		Propietario prop = this.seleccionar(cedula);
+		Propietario prop = this.seleccionarEliminar(cedula);
 		base.remove(prop);
 	}
 

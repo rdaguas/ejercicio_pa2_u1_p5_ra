@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.uce.edu.repository.IMatriculaRepository;
 import com.uce.edu.repository.IPropietarioRepository;
@@ -13,7 +13,7 @@ import com.uce.edu.repository.modelo.Matricula;
 import com.uce.edu.repository.modelo.Propietario;
 import com.uce.edu.repository.modelo.Vehiculo;
 
-@Repository
+@Service
 public class MatriculaServiceImpl implements IMatriculaService {
 
 	@Autowired

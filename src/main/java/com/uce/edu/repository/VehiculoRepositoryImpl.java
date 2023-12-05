@@ -20,6 +20,15 @@ public class VehiculoRepositoryImpl implements IVehiculoRepository{
 		}
 		return null;
 	}
+	
+	public Vehiculo seleccionarEliminar(String placa) {
+		// TODO Auto-generated method stub
+		for(Vehiculo vehi : base) {
+			if(vehi.getPlaca().equals(placa));
+			return vehi;
+		}
+		return null;
+	}
 
 	@Override
 	public void insertar(Vehiculo vehiculo) {
@@ -38,7 +47,7 @@ public class VehiculoRepositoryImpl implements IVehiculoRepository{
 	@Override
 	public void eliminar(String placa) {
 		// TODO Auto-generated method stub
-		Vehiculo vehiculo = this.seleccionar(placa);
+		Vehiculo vehiculo = this.seleccionarEliminar(placa);
 		base.remove(vehiculo);
 	}
 
